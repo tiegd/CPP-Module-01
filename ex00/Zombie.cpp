@@ -6,7 +6,7 @@
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 12:57:18 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/01/25 15:31:38 by gaducurt         ###   ########.fr       */
+/*   Updated: 2026/01/25 17:06:33 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,13 @@
 
 Zombie::Zombie()
 {
-	randomChump("<name>");
+	announce();
 }
 
 Zombie::Zombie(std::string str)
 {
-	randomChump(str);
+	name = str;
+	announce();
 }
 
 void	Zombie::announce()
@@ -29,5 +30,6 @@ void	Zombie::announce()
 }
 
 Zombie::~Zombie()
-{	
+{
+	std::cout << name << " has been destroyed" << std::endl;
 }

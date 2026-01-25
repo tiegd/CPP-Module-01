@@ -6,7 +6,7 @@
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 12:57:24 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/01/25 15:31:56 by gaducurt         ###   ########.fr       */
+/*   Updated: 2026/01/25 17:11:37 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@ class	Zombie
 		Zombie();
 		Zombie(std::string str);
 		void	announce();
-		// Zombie*	newZombie(std::string name);
-		void	randomChump(std::string name);
 		~Zombie();
 };
+
+Zombie*	newZombie(std::string name);
+void	randomChump(std::string name);
 
 #endif
