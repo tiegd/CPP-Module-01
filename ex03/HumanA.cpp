@@ -6,16 +6,16 @@
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 14:57:50 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/02/02 17:11:59 by gaducurt         ###   ########.fr       */
+/*   Updated: 2026/02/03 16:39:08 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 #include <iostream>
 
-HumanA::HumanA(std::string str, Weapon &obj): weapon(obj)
+HumanA::HumanA(std::string name, Weapon &w): weapon(w)
 {
-	name = str;
+	this->name = name;
 }
 
 void	HumanA::attack()

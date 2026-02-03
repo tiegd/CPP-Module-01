@@ -6,7 +6,7 @@
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 14:57:57 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/02/02 17:46:25 by gaducurt         ###   ########.fr       */
+/*   Updated: 2026/02/03 16:39:27 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class HumanA
 		std::string	name;
 		Weapon		&weapon;
 	public:
-		HumanA(std::string str, Weapon &obj);
+		HumanA(std::string name, Weapon &w);
 		void	attack();
 		~HumanA();
 };

@@ -6,26 +6,26 @@
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 14:58:04 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/02/02 17:47:34 by gaducurt         ###   ########.fr       */
+/*   Updated: 2026/02/03 16:39:56 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 #include <iostream>
 
-HumanB::HumanB(std::string str)
+HumanB::HumanB(std::string name)
 {
-	name = str;
+	this->name = name;
 }
 
-void	HumanB::setWeapon(Weapon obj)
+void	HumanB::setWeapon(Weapon &weapon)
 {
-	weapon = obj;
+	this->weapon = &weapon;
 }
 
 void	HumanB::attack()
 {
-	std::cout << name << " attacks with their " << weapon.getType() << std::endl;
+	std::cout << this->name << " attacks with their " << weapon->getType() << std::endl;
 }
 
 HumanB::~HumanB()
