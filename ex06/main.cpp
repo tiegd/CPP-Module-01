@@ -6,7 +6,7 @@
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 11:34:49 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/02/04 15:25:43 by gaducurt         ###   ########.fr       */
+/*   Updated: 2026/02/04 16:38:04 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 int	main(int ac, char **av)
 {
 	Harl	harl;
-	
 	if (ac != 2)
 		return (1);
 	harl.complain(av[1]);
