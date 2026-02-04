@@ -5,17 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/25 12:56:54 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/02/02 14:24:29 by gaducurt         ###   ########.fr       */
+/*   Created: 2026/02/02 14:27:13 by gaducurt          #+#    #+#             */
+/*   Updated: 2026/02/02 14:52:15 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
+#include <string>
 
 int	main()
 {
-	int	i = 6;
-	std::string str = "Zombie";
-	Zombie*	horde = zombieHorde(i, str);
-	delete[] horde;
+	std::string str = "HI THIS IS BRAIN";
+	std::string *stringPTR = &str;
+	std::string	&stringREF = str;
+
+	std::cout << "adress str = " << &str << std::endl;
+	std::cout << "adress stringPTR = " << &stringPTR << std::endl;
+	std::cout << "adress stringREF = " << &stringREF << '\n' << std::endl;
+
+	std::cout << "str = " << str << std::endl;
+	std::cout << "stringPTR = " << stringPTR << std::endl;
+	std::cout << "stringREF = " << stringREF << std::endl;
 }

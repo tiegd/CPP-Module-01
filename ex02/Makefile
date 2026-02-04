@@ -1,4 +1,4 @@
-NAME = horde
+NAME = brain
 
 CXX = c++
 
@@ -6,7 +6,7 @@ CXXFLAGS = -Wall -Wextra -Werror -MD -std=c++98
 
 BIN = bin/
 			
-SRC =	main.cpp Zombie.cpp zombieHorde.cpp	\
+SRC =	main.cpp	\
 
 OBJ = $(SRC: .cpp=.o)
 OBJ := $(addprefix $(BIN), $(SRC:.cpp=.o))
