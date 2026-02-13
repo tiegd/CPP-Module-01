@@ -6,7 +6,7 @@
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 16:43:54 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/02/04 11:28:20 by gaducurt         ###   ########.fr       */
+/*   Updated: 2026/02/13 18:01:48 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,31 +16,26 @@
 #include <fstream>
 #include <sstream>
 
-void	replace()
+int	replace(char **s)
 {
-	
-}
+	std::string const 		s1 = s[2];
+	std::string 			s2 = s[3];
+	std::string				line;
+	std::ifstream			infile;
+	std::string::size_type	n;
 
-int	main(int ac, char **av)
-{
-	if (ac == 4)
+	infile.open(s[1]);
+	std::ofstream	outfile;
+	std::strcat(s[1], ".replace");
+
+	outfile.open(s[1]);
+	if (!outfile.is_open())
+		return (1);
+	if (infile.is_open())
 	{
-		std::string const 		s1 = av[2];
-		std::string 			s2 = av[3];
-		std::string				line;
-		std::ifstream			infile;
-		std::string::size_type	n;
-
-		infile.open(av[1]);
-		std::ofstream	outfile;
-		std::strcat(av[1], ".replace");
-
-		outfile.open(av[1]);
-		if (!outfile.is_open())
-			return (1);
-		if (infile.is_open())
+		while (std::getline(infile, line, '\0'))
 		{
-			while (std::getline(infile, line, '\0'))
+			if (s1.length() != 0 && s2.length() != 0)
 			{
 				n = line.find(s1);
 				while (n <= std::string::npos)
@@ -52,8 +47,16 @@ int	main(int ac, char **av)
 					n = line.find(s1);
 				}
 			}
-			outfile << line << std::endl;
 		}
+		outfile << line;
 	}
 	return (0);
+}
+
+int	main(int ac, char **av)
+{
+	
+	if (ac == 4)
+		return (replace(av));
+	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 12:57:24 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/02/02 17:24:49 by gaducurt         ###   ########.fr       */
+/*   Updated: 2026/02/13 15:53:51 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ class	Zombie
 	private:
 		std::string	name;
 	public:
+		Zombie();
 		Zombie(std::string str);
 		void	setName(std::string str);
 		void	announce();

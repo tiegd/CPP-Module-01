@@ -6,7 +6,7 @@
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 14:58:22 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/02/13 10:29:54 by gaducurt         ###   ########.fr       */
+/*   Updated: 2026/02/13 16:12:51 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,9 @@ Weapon::Weapon(std::string str)
 	setType(str);
 }
 
-const std::string	Weapon::getType()
+const std::string&	Weapon::getType() const
 {
-	std::string	&ref = this->type;
-	return (ref);
+	return (type);
 }
 
 void	Weapon::setType(const std::string type)

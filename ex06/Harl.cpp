@@ -6,7 +6,7 @@
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 11:37:44 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/02/04 16:43:34 by gaducurt         ###   ########.fr       */
+/*   Updated: 2026/02/13 17:45:17 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,20 +38,13 @@ void Harl::complain(std::string level)
 			switch(i)
 			{
 				case 0:
-					for (int j = i; j < 4; j++)
-						(this->*f[j])();
-					break;
+					(this->*f[0])();
 				case 1:
-					for (int j = i; j < 4; j++)
-						(this->*f[j])();
-					break;
+					(this->*f[1])();
 				case 2:
-					for (int j = i; j < 4; j++)
-						(this->*f[j])();
-					break;
+					(this->*f[2])();
 				case 3:
-					for (int j = i; j < 4; j++)
-						(this->*f[j])();
+					(this->*f[3])();
 			}
 		}
 	}
