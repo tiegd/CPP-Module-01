@@ -6,7 +6,7 @@
 /*   By: gaducurt <gaducurt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/02 14:58:29 by gaducurt          #+#    #+#             */
-/*   Updated: 2026/02/03 15:58:01 by gaducurt         ###   ########.fr       */
+/*   Updated: 2026/02/13 10:28:14 by gaducurt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Weapon
 	public:
 		Weapon();
 		Weapon(std::string str);
-		std::string	getType();
+		const std::string	getType();
 		void		setType(const std::string type);
 		~Weapon();
 };
